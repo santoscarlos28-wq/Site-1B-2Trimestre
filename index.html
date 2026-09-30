@@ -50,7 +50,8 @@
             <h2>Sua próxima aventura começa aqui, Os melhores preços em consoles e games so aqui no Mundo Pixel</h2>
             <p>Sejam Bem vindos ao mundo pixel </p>
             <p class="artigo-autor">Por:Carlos André</p> 
-            <button>🗿<span>0</span></button>
+                <button>🫦<span>0</span></button>
+             <button>🗿<span>0</span></button>
         </div>
     </main>
 
@@ -58,13 +59,19 @@
 
 </body>
 <script>
-const botao = document.querySelector("button");
-botao.addEventListener("click", botaoClicado);
-function botaoClicado() {
-console.log("fui clicado");
-let texto = botao.querySelector("span");
-texto.textContent++;
-}
+const botões = document.querySelectorAll("main button");
+botoes.forEach(function (botoes) {
 
+
+botoes.addEventListener("click", botaoClicado);
+function botoesClicado() {
+console.log("fui clicado");
+let texto = botoesquerySelector("span");
+texto.textContent++;
+    }
+
+});
 </script>
+
+
 </html>
