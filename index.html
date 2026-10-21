@@ -1,77 +1,87 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <style>
+        header {
+            background-color: rgba(13, 11, 14, 0.956);
+            color: rgb(236, 231, 235);
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            border: 5px solid rgb(50, 236, 8);
+            padding: 16px;
+        }
 
+        main {
+            background-color: rgba(13, 14, 13, 0.79);
+            color: rgb(221, 221, 228);
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            border: 5px solid rgb(46, 156, 12);
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
 
-    
+        img {
+            width: 90px;
+            height: 90px;
+            object-fit: contain;
+        }
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Blog</title>
-<style>
-    header{
-        background-color: rgba(13, 11, 14, 0.956);
-        color: rgb(236, 231, 235);
-        text-align: center;
-        max-width: 800px;
-        margin: 0 auto ;
-        border: 5px solid rgb(50, 236, 8);
-        padding: 16px;
-    }
-    main{
-        background-color: rgba(13, 14, 13, 0.79);
-        color: rgb(221, 221, 228);
-        text-align: center;
-        max-width: 800px;
-        margin: 0 auto ;
-        border: 5px solid rgb(46, 156, 12);
-        padding: 16px;
-        display: flex;
-    }
-    img{
-        .artigo-autor{
+        .artigo-autor {
             font-weight: bold;
         }
-        width: 90px;
-        height: 90px;
-    }
-</style>
 
-    </head>
-    <body>
-        <header>
-            <h1>👾Mundo Pixel👾</h1>
-            <p>Vamos dar um Play▶️</p>
-        </header>
+        /* Estilo opcional para destacar os botões */
+        button {
+            cursor: pointer;
+            padding: 8px 12px;
+            font-size: 1rem;
+            margin: 0 4px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>👾Mundo Pixel👾</h1>
+        <p>Vamos dar um Play▶️</p>
+    </header>
 
     <main>
-        <img src="Image_Blog.png" alt="Uma imagem de capa temática para o site Mundo Pixel. Em um ambiente escuro iluminado por luzes LED verde-neon, um gamer veste headset e joga em um setup moderno com gabinete transparente, teclado e mouse iluminados. Sobre a mesa, há dois monitores exibindo jogos e a logo 'Mundo Pixel', além de consoles clássicos como Super Nintendo, um PlayStation 5 e caixas de jogos. Na parede, destaca-se um letreiro luminoso em neon verde com o nome 'Mundo Pixel'.">
+        <!-- Imagem 1: Esquerda -->
+        <img src="Image_Blog.png" alt="Uma imagem de capa temática para o site Mundo Pixel.">
+
+        <!-- Conteúdo Central -->
         <div>
             <h2>Sua próxima aventura começa aqui, Os melhores preços em consoles e games so aqui no Mundo Pixel</h2>
-            <p>Sejam Bem vindos ao mundo pixel </p>
-            <p class="artigo-autor">Por:Carlos André</p> 
-                <button>🫦<span>0</span></button>
-             <button>🗿<span>0</span></button>
+            <p>Sejam Bem vindos ao mundo pixel</p>
+            <p class="artigo-autor">Por: Carlos André</p> 
+            
+            <button>💩 <span>0</span></button>
+            <button>🗿 <span>0</span></button>
         </div>
+
+        <!-- Imagem 2: Direita (GitHub) -->
+        <img src="Image_Blog2.png" alt="Uma foto de close-up no estilo bokeh de uma mão segurando um controle de videogame preto, com a logo "Mundo Pixel" em destaque na tela de um monitor de PC no fundo desfocado, junto com teclados mecânicos e fones de ouvido." class="img-github">
     </main>
 
+    <script>
+        const botoes = document.querySelectorAll("main button");
 
-
+        botoes.forEach(function (botao) {
+            botao.addEventListener("click", function () {
+                console.log("Fui clicado");
+                let contador = botao.querySelector("span");
+                contador.textContent = parseInt(contador.textContent) + 1;
+            });
+        });
+    </script>
 </body>
-<script>
-const botões = document.querySelectorAll("main button");
-botoes.forEach(function (botoes) {
-
-
-botoes.addEventListener("click", botaoClicado);
-function botoesClicado() {
-console.log("fui clicado");
-let texto = botoesquerySelector("span");
-texto.textContent++;
-    }
-
-});
-</script>
-
-
 </html>
